@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Nontobeko 🌹</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+height:100vh;
+font-family:Poppins,sans-serif;
+background:linear-gradient(135deg,#ff9aa2,#ff4d6d,#8b0000);
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+color:white;
+}
+
+/* Romantic card */
+
+.card{
+background:rgba(255,255,255,0.12);
+backdrop-filter:blur(10px);
+padding:50px;
+border-radius:20px;
+width:650px;
+text-align:center;
+box-shadow:0 0 40px rgba(0,0,0,0.4);
+}
+
+/* Title */
+
+h1{
+font-family:"Great Vibes",cursive;
+font-size:65px;
+margin-bottom:20px;
+}
+
+/* Text */
+
+p{
+font-size:20px;
+line-height:1.7;
+}
+
+/* Button */
+
+button{
+margin-top:30px;
+padding:14px 35px;
+font-size:18px;
+border:none;
+border-radius:40px;
+background:#ff2e63;
+color:white;
+cursor:pointer;
+transition:0.4s;
+box-shadow:0 0 20px #ff2e63;
+}
+
+button:hover{
+transform:scale(1.1);
+box-shadow:0 0 40px pink;
+}
+
+/* Hidden message */
+
+#message{
+margin-top:20px;
+display:none;
+}
+
+/* Falling roses */
+
+.rose{
+position:absolute;
+top:-50px;
+font-size:28px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+0%{transform:translateY(-50px) rotate(0deg);}
+100%{transform:translateY(110vh) rotate(360deg);}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>For Nontobeko (Thatho) 🌹</h1>
+
+<p>
+From the moment I got to know you, something about you felt special.
+Your smile, your kindness, and the way you carry yourself — it all stands out to me.
+</p>
+
+<button onclick="showMessage()">Click for a Surprise ❤️</button>
+
+<div id="message">
+
+<p>
+I really like you. And if life ever gave me the chance, I would want to learn how to love you the right way — the way God intended for you to be loved: with respect, patience, and honesty.
+</p>
+
+<p>
+Right now I’m focusing on my studies and building my future. But maybe one day, when the time is right, I hope you might think about the possibility of us.
+</p>
+
+<p><em>Bengingathanda ukuthi ngelinye ilanga ucabange ngathi.</em></p>
+
+<p>
+Because honestly… I think we could make an amazing couple. 🌹
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+function showMessage(){
+document.getElementById("message").style.display="block";
+}
+
+/* Create falling roses */
+
+for(let i=0;i<35;i++){
+
+let rose=document.createElement("div");
+rose.className="rose";
+rose.innerHTML="🌹";
+
+rose.style.left=Math.random()*100+"vw";
+rose.style.animationDuration=(6+Math.random()*5)+"s";
+rose.style.fontSize=(20+Math.random()*20)+"px";
+
+document.body.appendChild(rose);
+
+}
+
+</script>
+
+</body>
+</html>
